@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <title>Vragenlijst LHBTI+</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Evenementenmatch LHBTI+</h1>
+
+  <form id="matchForm">
+    <div class="question">
+      <label><strong>1. Wat is je budget voor een evenement?</strong></label>
+      <input type="checkbox" name="kosten" value="free"> Ik zoek gratis activiteiten<br>
+      <input type="checkbox" name="kosten" value="paid"> Betaalde events zijn prima<br>
+      <input type="checkbox" name="kosten" value="zero"> Beide zijn oké<br>
+    </div>
+
+    <div class="question">
+      <label><strong>2. . Wat voor sfeer zoek je in een evenement?</strong></label>
+      <input type="checkbox" name="sfeer" value="quiet" value="healing"> Ik wil tot rust komen<br>
+      <input type="checkbox" name="sfeer" value="quiet" value="safe"> Ik zoek iets gezelligs maar ontspannen<br>
+      <input type="checkbox" name="sfeer" value="party"> Ik hou van een energieke, feestelijke sfeer<br>
+      <input type="checkbox" name="sfeer" value="inclusive"> Ik sta open voor alles, als het maar goed voelt<br>
+    </div>
+
+    <div class="question">
+      <label><strong>3. In welke omgeving voel jij je het prettigst?</strong></label>
+      <input type="checkbox" name="locatie" value="city"> Midden in de stad<br>
+      <input type="checkbox" name="locatie" value="nature"> Liever buiten, in de natuur<br>
+    </div>
+
+    <div class="question">
+      <label><strong>4. Welke inhoud spreekt je het meest aan?</strong></label>
+      <input type="checkbox" name="inhoud" value="art"> Kunst, theater of film<br>
+      <input type="checkbox" name="inhoud" value="learning"> Educatie, verdieping of gesprekken <br>
+      <input type="checkbox" name="inhoud" value="activism"> Activisme en maatschappelijke thema's<br>
+      <input type="checkbox" name="inhoud" value="party" value="safe" value="inclusive"> Gewoon iets leuks/ontspannends <br>
+    </div>
+
+    <div class="question">
+      <label><strong>5. Hoe actief wil je zijn tijdens het evenement?</strong></label>
+      <input type="checkbox" name="activiteitstype" value="active"> Lekker bewegen, actief bezig zijn<br>
+      <input type="checkbox" name="activiteitstype" value="quiet"> Rustig zitten, kijken of luisteren<br>
+      <input type="checkbox" name="activiteitstype" value="zero"> Beide kan<br>
+    </div>
+
+    <div class="question">
+      <label><strong>6. Wat voor soort deelnemers wil je om je heen?</strong></label>
+      <input type="checkbox" name="community-focus" value="queer_only"> Alleen queer mensen<br>
+      <input type="checkbox" name="community-focus" value="inclusive"> Iedereen is welkom<br>
+      <input type="checkbox" name="community-focus" value="nb_friendly"> Non-binaire mensen of genderdiversiteit staat centraal <br>
+      <input type="checkbox" name="community-focus" value="zero"> Geen voorkeur<br>
+     </div>
+
+    <div class="question">
+      <label><strong>7. Wat vind je belangrijk aan de sfeer of veiligheid?</strong></label>
+      <input type="checkbox" name="veiligheid" value="safe"> Dat het veilig voelt<br>
+      <input type="checkbox" name="veiligheid" value="healing"> Dat er ruimte is voor persoonlijke groei of heling<br>
+      <input type="checkbox" name="veiligheid" value="zero"> Geen voorkeur<br>
+    </div>
+
+<div class="question">
+      <label><strong>8. Hoe nieuwsgierig ben je naar iets nieuws of verrassends?</strong></label>
+      <input type="checkbox" name="exploratie" value="curious"> Ik zoek iets onverwachts of nieuws<br>
+      <input type="checkbox" name="exploratie" value="zero"> Ik hou van vertrouwde dingen<br>
+    </div>
+
+<div class="question">
+      <label><strong>9. Hoe denk je over activisme?</strong></label>
+      <input type="checkbox" name="activisme" value="activism"> Ik ben zelf actief betrokken<br>
+      <input type="checkbox" name="activisme" value="learning"> Ik ben geïnteresseerd, maar vooral als toeschouwer<br>
+      <input type="checkbox" name="activisme" value="zero"> Geen interesse in activisme<br>
+    </div>
+
+<div class="question">
+      <label><strong>10. Moet het evenement rolstoeltoegankelijk zijn?</strong></label>
+      <input type="checkbox" name="praktisch" value="accessible"> Ja<br>
+      <input type="checkbox" name="praktisch" value="zero"> Maakt me niet uit
+</div>
+
+      <button type="submit">Bekijk evenementen</button>
+  </form>
+
+  <div class="results" id="results"></div>
+
+  <script src="scriptlala.js"></script>
+</body>
+</html>

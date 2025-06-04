@@ -38,5 +38,20 @@ app.get('/events', async (req, res) => {
     GROUP BY evenementen.evenement_id
   `;
 
-  try {
-    const result = await pool.que
+   try {
+    const result = await pool.query(query);
+    const formatted = result.rows.map(row => ({
+      id: row.evenement_id,
+      name: row.evenement_name,
+      tags: row.tags.split(',')
+    }));
+    res.json(formatted);
+  } catch (err) {
+    console.error('❌ Query fout:', err);
+    res.status(500).json({ error: 'Database fout' });
+  }
+});
+
+app.listen(PORT, () => {
+  console.log(`🚀 Server draait op http://localhost:${PORT}`);
+});

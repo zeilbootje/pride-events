@@ -71,3 +71,6 @@ app.listen(PORT, () => {
   console.log(`🚀 Server draait op http://localhost:${PORT}`);
 });
 
+app.get('/test', (req, res) => {
+  res.send('Test route werkt!');
+});

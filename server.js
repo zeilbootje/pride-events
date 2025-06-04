@@ -17,6 +17,11 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
+// Optioneel: 404 voor niet-bestaande bestanden
+app.use((req, res, next) => {
+  res.status(404).send('404 Not Found');
+});
+
 // 🔌 Verbind met PostgreSQL database via Render
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,

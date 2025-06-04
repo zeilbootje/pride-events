@@ -17,11 +17,6 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// Optioneel: 404 voor niet-bestaande bestanden
-app.use((req, res, next) => {
-  res.status(404).send('404 Not Found');
-});
-
 // 🔌 Verbind met PostgreSQL database via Render
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
@@ -66,11 +61,16 @@ app.get('/events', async (req, res) => {
   }
 });
 
-console.log('Luister op poort:', PORT);
-app.listen(PORT, () => {
-  console.log(`🚀 Server draait op http://localhost:${PORT}`);
-});
-
+// Test route
 app.get('/test', (req, res) => {
   res.send('Test route werkt!');
+});
+
+// 404 handler - zet deze als laatste!
+app.use((req, res, next) => {
+  res.status(404).send('404 Not Found');
+});
+
+app.listen(PORT, () => {
+  console.log(`🚀 Server draait op http://localhost:${PORT}`);
 });

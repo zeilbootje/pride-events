@@ -1,12 +1,21 @@
 const express = require('express');
 const cors = require('cors');
-const { Pool } = require('pg'); // ← importeer Pool maar 1 keer
+const { Pool } = require('pg');
+const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
+
+// Statische frontend bestanden serveren uit /public
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Root route serveert index.html
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 // 🔌 Verbind met PostgreSQL database via Render
 const pool = new Pool({

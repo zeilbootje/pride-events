@@ -10,7 +10,7 @@ document.getElementById('matchForm').addEventListener('submit', function (e) {
   }
 
   // Haal alle evenementen op
-  fetch('http://localhost:3000/events')
+  fetch('/events')
     .then(res => res.json())
     .then(events => {
       const resultsDiv = document.getElementById('results');

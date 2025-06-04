@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const { Pool } = require('pg');
+const { Pool } = require('pg'); // ← importeer Pool maar 1 keer
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -9,7 +9,6 @@ app.use(cors());
 app.use(express.json());
 
 // 🔌 Verbind met PostgreSQL database via Render
-const { Pool } = require('pg');
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: {
@@ -39,7 +38,7 @@ app.get('/events', async (req, res) => {
     GROUP BY evenementen.evenement_id
   `;
 
-   try {
+  try {
     const result = await pool.query(query);
     const formatted = result.rows.map(row => ({
       id: row.evenement_id,

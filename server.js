@@ -66,6 +66,8 @@ app.get('/events', async (req, res) => {
   }
 });
 
+console.log('Luister op poort:', PORT);
 app.listen(PORT, () => {
   console.log(`🚀 Server draait op http://localhost:${PORT}`);
 });
+

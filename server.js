@@ -9,6 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 // 🔌 Verbind met PostgreSQL database via Render
+const { Pool } = require('pg');
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
   ssl: {

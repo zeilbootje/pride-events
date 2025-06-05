@@ -1,14 +1,19 @@
 body {
   font-family: Arial, sans-serif;
+  font-family: Quicksand, sans-serif;
+  font-family: Raleway, sans-serif;
+  background-color: #fbdce4
   max-width: 800px;
   margin: auto;
   padding: 20px;
 }
 h1 {
   color: #e5006c;
+  font-family: 'Quicksand', sans-serif;
 }
 .question {
   margin-bottom: 20px;
+  font-family: 'Raleway', sans-serif;
 }
 label {
   display: block;

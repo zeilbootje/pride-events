@@ -6,14 +6,17 @@ body {
   max-width: 800px;
   margin: auto;
   padding: 20px;
+  text-align: center;
 }
 h1 {
   color: #e5006c;
   font-family: 'Quicksand', sans-serif;
+  text-align: center;
 }
 .question {
   margin-bottom: 20px;
   font-family: 'Raleway', sans-serif;
+  text-align: center;;
 }
 label {
   display: block;
@@ -26,6 +29,7 @@ button {
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  text-align: center;
 }
 
 input[type="checkbox"] {
@@ -38,4 +42,5 @@ input[type="checkbox"] {
   background: #f4f4f4;
   padding: 15px;
   border-radius: 5px;
+  text-align: center;
 }

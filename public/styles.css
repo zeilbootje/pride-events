@@ -16,11 +16,12 @@ h1 {
 .question {
   margin-bottom: 20px;
   font-family: 'Raleway', sans-serif;
-  text-align: left-center;
+  text-align: center;
 }
 label {
   display: block;
   margin-bottom: 5px;
+  text-align: left;
 }
 button {
   padding: 10px 20px;
